@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'DM Serif Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    font-family: var(--font-sans);
+    background-color: #0b0c10;
+    color: #f1f5f9;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #0b0c10;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0c10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+.font-space {
+  font-family: var(--font-display);
+}
+
+.font-code {
+  font-family: var(--font-mono);
+}
+
+/* Reference Image Background Orbit Rings */
+.orbit-circle {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+/* Reference Image Pill Button */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pill-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pill-btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #0b0c10;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+.pill-btn-white:hover {
+  background: #f1f5f9;
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.25);
+}
+
+/* Interactive Work Row Inversion (Exact behavior from reference screenshot) */
+.work-table-row {
+  display: grid;
+  grid-template-columns: 180px 1.4fr 1.2fr 1fr;
+  align-items: center;
+  padding: 1.4rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .work-table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1.2rem 1rem;
+  }
+}
+.work-table-row:hover,
+.work-table-row.active {
+  background-color: #ffffff;
+  color: #090a0f !important;
+  border-color: #ffffff;
+}
+.work-table-row:hover *,
+.work-table-row.active * {
+  color: #090a0f !important;
+}
+
+/* Reference Image Bento Skill Card */
+.editorial-bento-card {
+  background: rgba(18, 20, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(16px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.editorial-bento-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Carousel Card Transitions */
+.carousel-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.carousel-card.inactive {
+  opacity: 0.35;
+  transform: scale(0.92);
+  filter: blur(1px);
+}
+.carousel-card.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+/* Apple/Editorial Spotlight */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(16, 18, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(88, 166, 255, 0.12),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+.spotlight-card:hover {
+  border-color: rgba(88, 166, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Executive Print Styling for CV Modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cv-modal, #cv-modal * {
+    visibility: visible;
+  }
+  #cv-modal {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+  #cv-modal > div:first-child {
+    display: none !important;
+  }
+  #cv-modal .modal-content {
+    position: static !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 15mm 20mm !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  #cv-modal .modal-content * {
+    color: #111827 !important;
+    border-color: #cbd5e1 !important;
+  }
+  #cv-modal .modal-content h3 {
+    color: #0f172a !important;
+  }
+  #cv-modal .modal-content h4 {
+    color: #1e40af !important;
+    border-bottom: 1.5px solid #1e40af !important;
+  }
+  #cv-modal .modal-content p, 
+  #cv-modal .modal-content span,
+  #cv-modal .modal-content li {
+    color: #334155 !important;
+  }
+  #cv-modal button,
+  #cv-modal .pt-6.mt-6.border-t {
+    display: none !important;
+  }
+}

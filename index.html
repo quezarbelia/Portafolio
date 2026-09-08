@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Quezada Avila | Ingeniero en Informática · Data Analytics · Business Intelligence</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Portafolio profesional de Gabriel Quezada Avila. Ingeniero en Informática por UPIICSA IPN. Especialista en Data Analytics, Business Intelligence, Oracle DBA, Power BI, Tableau y Cloud Data Management." />
+  <meta name="author" content="Gabriel Quezada Avila" />
+  
+  <!-- Open Graph / Gravatar Link -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gabriel-quezada-avila.link" />
+  <meta property="og:title" content="Gabriel Quezada Avila | Ingeniero en Informática" />
+  <meta property="og:description" content="Data Analytics · Business Intelligence · Cloud Data Management. UPIICSA · Instituto Politécnico Nacional." />
+  <meta property="og:image" content="/gabriel-avatar.jpg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gabriel Quezada Avila | Portafolio" />
+  <meta name="twitter:description" content="Ingeniero en Informática · Data Analytics · Business Intelligence" />
+  <meta name="twitter:image" content="/gabriel-avatar.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Google Fonts: DM Serif Display, Inter, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="bg-[#0b0c10] text-slate-100 selection:bg-white selection:text-black font-sans antialiased relative overflow-x-hidden">
+
+  <!-- Background Orbit Wireframe Rings (from reference design) -->
+  <div class="orbit-circle w-[700px] h-[700px] -top-64 -right-48 border-white/[0.04]"></div>
+  <div class="orbit-circle w-[1100px] h-[1100px] top-[14%] -left-[350px] border-white/[0.03]"></div>
+  <div class="orbit-circle w-[900px] h-[900px] top-[55%] -right-[250px] border-white/[0.04]"></div>
+
+  <!-- Apple / Dynamic Island Floating Toast -->
+  <div id="apple-toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] opacity-0 -translate-y-6 pointer-events-none">
+    <div class="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-xs shadow-2xl tracking-wide">
+      <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+      <span id="apple-toast-text">Notificación</span>
+    </div>
+  </div>
+
+  <!-- Minimalist Clean Top Header -->
+  <header class="relative z-30 max-w-7xl mx-auto px-6 sm:px-10 pt-8 pb-4 flex items-center justify-between">
+    
+    <!-- Profile ID with Real Photo -->
+    <a href="#hero" class="flex items-center gap-3 group">
+      <img 
+        src="/gabriel-avatar.jpg" 
+        alt="Gabriel Quezada Avila" 
+        class="w-10 h-10 rounded-full object-cover border border-white/20 shadow-md group-hover:scale-105 transition-transform"
+        onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Gabriel+Quezada&background=111827&color=ffffff&size=100&bold=true';"
+      />
+      <div>
+        <span class="text-sm font-bold text-white tracking-tight block group-hover:text-blue-400 transition-colors">Gabriel Quezada Avila</span>
+        <span class="text-[10px] text-slate-400 font-mono tracking-wide">Ingeniero en Informática · UPIICSA IPN</span>
+      </div>
+    </a>
+
+    <!-- Center Navigation Links -->
+    <nav class="hidden md:flex items-center gap-7 text-xs font-medium text-slate-400">
+      <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre mí</a>
+      <a href="#habilidades" class="hover:text-white transition-colors">Habilidades</a>
+      <a href="#data-projects" class="text-blue-400 font-semibold hover:text-white transition-colors">Análisis de Datos</a>
+      <a href="#proyectos" class="hover:text-white transition-colors">Casos de Estudio</a>
+      <a href="#work" class="hover:text-white transition-colors">Work</a>
+      <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+    </nav>
+
+    <!-- Header Right Action -->
+    <div class="flex items-center gap-3">
+      <button onclick="window.openCvModal()" class="pill-btn flex items-center gap-2 text-xs">
+        <span>Ver CV</span>
+        <span class="text-[10px]">➔</span>
+      </button>
+      <a href="https://gabriel-quezada-avila.link" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex pill-btn text-xs text-cyan-300" title="Enlace oficial Gravatar">
+        Gravatar
+      </a>
+    </div>
+  </header>
+
+
+  <main class="relative z-20 max-w-7xl mx-auto px-6 sm:px-10">
+
+    <!-- HERO SECTION (Matches Layout of Reference Design) -->
+    <section id="hero" class="pt-12 pb-20 border-b border-white/[0.08]">
+      
+      <!-- Top Annotation Row -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-slate-400 mb-10">
+        <div>
+          <span class="text-slate-500">... /Perfil profesional ...</span>
+        </div>
+        <div class="max-w-md text-left sm:text-right font-sans text-xs text-slate-400 leading-relaxed">
+          El objetivo es <span class="text-white italic">diseñar arquitecturas de datos de alto impacto</span> que cubran el ciclo completo: ingesta, modelado relacional ACID, pipelines en la nube y tableros ejecutivos.
+        </div>
+      </div>
+
+      <!-- Giant Editorial Title (from reference image) -->
+      <div class="my-12">
+        <h1 class="font-serif-display text-5xl sm:text-7xl lg:text-[5.5rem] font-normal text-white tracking-tight leading-[1.05]">
+          Data Analytics &
+        </h1>
+        
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 mt-3">
+          <a href="#data-projects" class="pill-btn-white flex items-center gap-2 shadow-lg">
+            <span>Ver Tableros</span>
+            <span class="text-xs">➔</span>
+          </a>
+          <h1 class="font-serif-display text-5xl sm:text-7xl lg:text-[5.5rem] font-normal text-white tracking-tight leading-[1.05]">
+            Business Intelligence
+          </h1>
+        </div>
+      </div>
+
+      <!-- Subtitle Description -->
+      <p class="max-w-2xl text-slate-400 text-sm sm:text-base leading-relaxed mb-10">
+        Mi propósito es <span class="text-slate-200 italic font-medium">transformar flujos de datos operativos en decisiones estratégicas accionables</span>, optimizando consultas complejas, esquemas estrella y canalizaciones automatizadas.
+      </p>
+
+      <!-- Social & Direct Action Badges (from reference image) -->
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://github.com/quezarbelia" target="_blank" rel="noopener noreferrer" class="pill-btn flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/gabriel-quezada-avila-638371389/" target="_blank" rel="noopener noreferrer" class="pill-btn flex items-center gap-2">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://public.tableau.com/app/profile/gabriel.quezada5584/vizzes" target="_blank" rel="noopener noreferrer" class="pill-btn flex items-center gap-2 text-amber-300">
+          <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 2v3.5H8V7h3.5v3.5h1V7H16V5.5h-3.5V2zm-7 7v3H1V13.5h3.5V17h1.5v-3.5H9.5V12H6V9zm15 0v3h-3.5v1.5H19.5V17H21v-3.5h3.5V12H21V9zM11.5 15.5V19H8v1.5h3.5V24h1v-3.5H16V19h-3.5v-3.5z"/></svg>
+          <span>Tableau Public</span>
+        </a>
+
+        <a href="https://gabriel-quezada-avila.link" target="_blank" rel="noopener noreferrer" class="pill-btn flex items-center gap-2 text-cyan-300">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <span>Gravatar Oficial</span>
+        </a>
+
+        <button onclick="window.copyEmail()" class="pill-btn flex items-center gap-2 text-slate-300">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email Directo</span>
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- DEDICATED SECTION: PROYECTOS DE ANÁLISIS DE DATOS & CIENCIA DE DATOS -->
+    <section id="data-projects" class="py-20 border-b border-white/[0.08]">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-mono text-blue-400 block mb-1">... /Catálogo Analítico ...</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            Proyectos de Análisis de Datos & Data Science
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 max-w-2xl leading-relaxed">
+            Colección de tableros interactivos en Tableau Public, modelos avanzados de Excel con Power Query/VBA y pipelines de analítica predictiva en Python.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a href="https://public.tableau.com/app/profile/gabriel.quezada5584/viz/Reportedellamadas-CONTRIBUTEL/Reportedellamadas-Contributel" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs flex items-center gap-1.5">
+            <span>Abrir CONTRIBUTEL</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Controls for Analytics Projects -->
+      <div class="flex items-center gap-2 mb-10 overflow-x-auto pb-2">
+        <button class="analytics-filter-btn px-4 py-1.5 rounded-full text-xs bg-white text-black font-bold transition-all" data-filter="all">
+          Todos los Proyectos (6)
+        </button>
+        <button class="analytics-filter-btn px-4 py-1.5 rounded-full text-xs text-slate-400 hover:text-white transition-all" data-filter="tableau">
+          Tableau Public (3)
+        </button>
+        <button class="analytics-filter-btn px-4 py-1.5 rounded-full text-xs text-slate-400 hover:text-white transition-all" data-filter="excel">
+          Excel & Power Query (2)
+        </button>
+        <button class="analytics-filter-btn px-4 py-1.5 rounded-full text-xs text-slate-400 hover:text-white transition-all" data-filter="python">
+          Python Data Science (1)
+        </button>
+      </div>
+
+      <!-- Dynamic Analytics Grid (Injected via main.js) -->
+      <div id="analytics-projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected dynamically -->
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT SHOWCASE CAROUSEL (Architecture & Systems) -->
+    <section id="proyectos" class="py-20 border-b border-white/[0.08]">
+      
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-mono text-slate-500 block mb-1">... /Arquitectura de Soluciones ...</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Casos de Estudio & Sistemas Clave</h2>
+        </div>
+        
+        <!-- Arrow Navigation Controls (like the screenshot) -->
+        <div class="flex items-center gap-3">
+          <button onclick="window.prevProject()" class="w-10 h-10 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-slate-300 hover:text-white transition-colors" aria-label="Proyecto anterior">
+            ←
+          </button>
+          <span id="carousel-indicator" class="text-xs font-mono text-slate-400">1 / 4</span>
+          <button onclick="window.nextProject()" class="w-10 h-10 rounded-full border border-white/10 hover:border-white/30 flex items-center justify-center text-slate-300 hover:text-white transition-colors" aria-label="Proyecto siguiente">
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Showcase Card -->
+      <div class="spotlight-card rounded-3xl p-6 sm:p-10 border border-white/10 relative overflow-hidden bg-[#11131a]/80">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Abstract 3D Glass / Visual Art Container -->
+          <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-900/40 via-indigo-950/60 to-purple-900/40 border border-white/10 flex items-center justify-center p-6 shadow-2xl">
+            <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-500 to-fuchsia-500 opacity-80 blur-xl"></div>
+            
+            <div class="absolute inset-4 rounded-xl border border-white/20 bg-black/40 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center">
+              <span class="w-12 h-12 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-2xl mb-3">📊</span>
+              <span id="carousel-category" class="text-xs font-mono uppercase tracking-wider text-blue-300 mb-1">Business Intelligence</span>
+              <span class="text-[11px] text-slate-400 font-mono">Consistencia ACID · Modelado Star</span>
+            </div>
+          </div>
+
+          <!-- Right: Project Information & Action Buttons -->
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <h3 id="carousel-title" class="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug mb-3">
+                Arquitectura Analítica & Plataforma de Inteligencia Financiera
+              </h3>
+
+              <p id="carousel-summary" class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                Arquitectura analítica integral para la ingesta, limpieza, modelado relacional y presentación de métricas financieras clave en tiempo real.
+              </p>
+
+              <!-- Tags -->
+              <div id="carousel-tags" class="flex flex-wrap gap-2 mb-8">
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Power BI</span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Tableau Server</span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Oracle DBA</span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-mono bg-white/5 border border-white/10 text-slate-300">Python ETL</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button id="carousel-details-btn" class="pill-btn-white flex items-center gap-2">
+                <span>Explorar Detalles</span>
+                <span class="text-xs">➔</span>
+              </button>
+
+              <button onclick="window.openProjectModal('arquitectura_financiera')" class="w-11 h-11 rounded-full border border-white/15 hover:border-white/40 flex items-center justify-center text-white transition-colors" title="Ver arquitectura completa">
+                ➔
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT ME & SKILLS BENTO (With Real Portrait Photo) -->
+    <section id="sobre-mi" class="py-20 border-b border-white/[0.08]">
+      
+      <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-16">
+        <div>
+          <span class="text-xs font-mono text-slate-500">... /Sobre mí ...</span>
+        </div>
+        <div class="max-w-xl text-left sm:text-right">
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            ¡Hola! Soy Gabriel Quezada Avila, <span class="text-white font-medium italic">Ingeniero en Informática</span> egresado de <span class="text-white font-semibold">UPIICSA · Instituto Politécnico Nacional (IPN)</span>. Especializado en Data Analytics y Business Intelligence con más de 4 años de experiencia en arquitectura y gestión de datos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid layout: Left Bento Cards, Right Real Portrait Photo Card -->
+      <div id="habilidades" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left 7 Columns: Skills Bento Grid -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Category 1: Business Intelligence & Reporting -->
+          <div class="editorial-bento-card">
+            <span class="text-xs font-mono text-amber-400 font-semibold uppercase tracking-wider block mb-2">📊 Business Intelligence & Reporting</span>
+            <p class="text-xs text-slate-300 font-mono leading-relaxed">
+              Power BI Desktop & Service / Tableau Server & Public / Excel Avanzado (Power Query, Modelos, Macros) / DAX & PowerQuery
+            </p>
+          </div>
+
+          <!-- Category 2: Bases de Datos & Almacenamiento -->
+          <div class="editorial-bento-card">
+            <span class="text-xs font-mono text-blue-400 font-semibold uppercase tracking-wider block mb-2">🗄️ Bases de Datos & Almacenamiento</span>
+            <p class="text-xs text-slate-300 font-mono leading-relaxed">
+              Oracle Database (Administración DBA / PL-SQL) / PostgreSQL / SQL Avanzado / Modelado Star & Snowflake
+            </p>
+          </div>
+
+          <!-- Category 3: Cloud & Data Engineering -->
+          <div class="editorial-bento-card">
+            <span class="text-xs font-mono text-cyan-400 font-semibold uppercase tracking-wider block mb-2">☁️ Cloud & Data Engineering</span>
+            <p class="text-xs text-slate-300 font-mono leading-relaxed">
+              Microsoft Fabric (OneLake, Data Factory) / Google Cloud Platform (BigQuery) / AWS (S3, Redshift) / Python ETL (Pandas, NumPy, SQLAlchemy)
+            </p>
+          </div>
+
+          <!-- Category 4: DevOps & Entornos -->
+          <div class="editorial-bento-card">
+            <span class="text-xs font-mono text-emerald-400 font-semibold uppercase tracking-wider block mb-2">⚙️ DevOps & Entornos</span>
+            <p class="text-xs text-slate-300 font-mono leading-relaxed">
+              Linux Ubuntu Server / Git & GitHub Actions CI/CD / Docker / VS Code / Bash Shell Scripting
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right 5 Columns: Real Portrait Photo Card & Gravatar Badge -->
+        <div class="lg:col-span-5">
+          <div class="spotlight-card rounded-3xl p-6 sm:p-8 border border-white/10 bg-[#12141c]/80 flex flex-col items-center text-center">
+            
+            <!-- Real Portrait Photo -->
+            <div class="relative w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden mb-6 border border-white/20 shadow-2xl bg-slate-900 group">
+              <img 
+                src="/gabriel-avatar.jpg" 
+                alt="Gabriel Quezada Avila"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 text-left">
+                <span class="text-xs font-bold text-white block">Gabriel Quezada Avila</span>
+                <span class="text-[10px] text-slate-300 font-mono">UPIICSA · IPN (Ciudad de México)</span>
+              </div>
+            </div>
+
+            <!-- Gravatar Profile Link -->
+            <a href="https://gabriel-quezada-avila.link" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-center text-xs mb-3 text-cyan-300">
+              <span>https://gabriel-quezada-avila.link</span>
+              <span class="text-[10px]">➔</span>
+            </a>
+
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Perfil digital oficial enlazado con ecosistema Gravatar, Tableau Public y credenciales profesionales.
+            </p>
+
+            <button onclick="window.copyEmail()" class="w-full py-2.5 rounded-full bg-white text-black font-semibold text-xs hover:bg-slate-200 transition-colors">
+              Copiar Correo Directo
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WORK / EXPERIENCE SECTION (Matching LaTeX CV) -->
+    <section id="work" class="py-20 border-b border-white/[0.08]">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-mono text-slate-500 block mb-1">... /Experiencia Profesional ...</span>
+          <h2 class="font-serif-display text-5xl sm:text-7xl lg:text-8xl font-normal text-white tracking-tight">
+            Work
+          </h2>
+        </div>
+        <div class="mt-4 sm:mt-0">
+          <span class="text-xs font-mono text-blue-400">Sector Público & Consultoría Independiente</span>
+        </div>
+      </div>
+
+      <!-- Interactive Table (Hover inverts colors) -->
+      <div class="border-t border-white/[0.1] divide-y divide-white/[0.08]">
+        
+        <!-- Row 1: CONTRIBUTEL SAFCDMX -->
+        <div class="work-table-row active group">
+          <div class="text-xs font-mono text-slate-400">
+            <span class="font-semibold text-white block">Ago 2025 - Act.</span>
+            <span class="text-[11px] text-slate-500">Sector Público</span>
+          </div>
+          <div class="font-semibold text-white text-sm sm:text-base tracking-tight">
+            CONTRIBUTEL — SAFCDMX
+          </div>
+          <div class="text-xs text-slate-300">
+            Analista de Datos y Operaciones
+          </div>
+          <div class="text-xs font-mono text-slate-400">
+            SQL, VBA, Access & Tableau
+          </div>
+        </div>
+
+        <!-- Row 2: Consultoría Independiente -->
+        <div class="work-table-row group">
+          <div class="text-xs font-mono text-slate-400">
+            <span class="font-semibold text-white block">Ene 2025 - Act.</span>
+            <span class="text-[11px] text-slate-500">Autónomo</span>
+          </div>
+          <div class="font-semibold text-white text-sm sm:text-base tracking-tight">
+            Consultoría de Sistemas y Datos
+          </div>
+          <div class="text-xs text-slate-300">
+            Consultor de Sistemas & ETL
+          </div>
+          <div class="text-xs font-mono text-slate-400">
+            Python, Postgres & Figma
+          </div>
+        </div>
+
+        <!-- Row 3: UPIICSA IPN -->
+        <div class="work-table-row group">
+          <div class="text-xs font-mono text-slate-400">
+            <span class="font-semibold text-white block">2025 - En curso</span>
+            <span class="text-[11px] text-slate-500">Formación Superior</span>
+          </div>
+          <div class="font-semibold text-white text-sm sm:text-base tracking-tight">
+            UPIICSA — IPN
+          </div>
+          <div class="text-xs text-slate-300">
+            Ingeniería en Informática
+          </div>
+          <div class="text-xs font-mono text-slate-400">
+            BI, Cloud & Data Architecture
+          </div>
+        </div>
+
+        <!-- Row 4: CECyT 5 Benito Juárez -->
+        <div class="work-table-row group">
+          <div class="text-xs font-mono text-slate-400">
+            <span class="font-semibold text-white block">2021 - 2024</span>
+            <span class="text-[11px] text-slate-500">Graduado</span>
+          </div>
+          <div class="font-semibold text-white text-sm sm:text-base tracking-tight">
+            CECyT 5 "Benito Juárez" — IPN
+          </div>
+          <div class="text-xs text-slate-300">
+            Técnico en Informática
+          </div>
+          <div class="text-xs font-mono text-slate-400">
+            Bases de Datos, Java & POO
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-right mt-6">
+        <span class="text-xs font-mono text-slate-500 block">Sector Público & Proyectos Independientes</span>
+        <span class="text-sm font-semibold text-white">Gestión operativa, fiscal y arquitecturas analíticas</span>
+      </div>
+
+    </section>
+
+
+    <!-- TERMINAL / PIPELINE SIMULATION -->
+    <section class="py-16 border-b border-white/[0.08]">
+      <div class="spotlight-card rounded-2xl p-6 border border-white/10 bg-[#0e1017]">
+        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10 text-xs font-mono text-slate-400">
+          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+          <span class="ml-2 font-semibold text-slate-300">terminal@gabriel-quezada-avila: ~</span>
+        </div>
+
+        <div class="space-y-2 font-mono text-xs text-slate-300">
+          <div class="text-emerald-400">$ whoami --role=data_analyst_and_engineer</div>
+          <div class="text-slate-400 pl-4">
+            nombre: Gabriel Quezada Avila<br/>
+            título: Ingeniero en Informática (UPIICSA · IPN)<br/>
+            especialidad: Data Analytics · Business Intelligence · Cloud Data Management<br/>
+            gravatar: https://gabriel-quezada-avila.link
+          </div>
+          <div class="text-blue-400 pt-2">$ pipeline --simulate --integrity=ACID</div>
+          <div class="text-slate-400 pl-4">
+            ▶ [ETL] Extrayendo datos operativos desde Oracle & PostgreSQL...<br/>
+            ▶ [TRANSFORM] Limpieza, normalización y cálculos con Python (Pandas)...<br/>
+            ▶ [LOAD] Cargando modelo dimensional en Microsoft Fabric & Cloud...<br/>
+            ✔ [OK] Métricas y KPIs financieros disponibles en tiempo real.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="py-20">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-mono text-slate-500">... /Contacto & Redes ...</span>
+            <h2 class="text-3xl font-bold tracking-tight text-white mt-2">Hablemos de tu proyecto</h2>
+            <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+              ¿Requieres optimizar tus esquemas de datos, construir tableros en Power BI/Tableau o diseñar un pipeline de datos robusto? Escríbeme y analicemos el impacto conjunto.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <a href="https://www.linkedin.com/in/gabriel-quezada-avila-638371389/" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-between">
+              <span>LinkedIn: Gabriel Quezada Avila</span>
+              <span>➔</span>
+            </a>
+            <a href="https://public.tableau.com/app/profile/gabriel.quezada5584/vizzes" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-between">
+              <span>Tableau Public: gabriel.quezada5584</span>
+              <span>➔</span>
+            </a>
+            <a href="https://gabriel-quezada-avila.link" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-between text-cyan-300">
+              <span>Gravatar: gabriel-quezada-avila.link</span>
+              <span>➔</span>
+            </a>
+            <a href="https://wa.me/525587195907" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-between text-emerald-400">
+              <span>WhatsApp / Tel: 55 8719-5907</span>
+              <span>➔</span>
+            </a>
+            <button onclick="window.copyEmail()" class="pill-btn w-full justify-between text-slate-200">
+              <span>Email: gabrielqva.10@gmail.com</span>
+              <span>Copiar</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="portfolio-contact-form" class="spotlight-card rounded-3xl p-6 sm:p-8 border border-white/10 bg-[#12141c] space-y-4">
+            <h3 class="text-lg font-bold text-white tracking-tight">Enviar Mensaje Directo</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Nombre</label>
+                <input type="text" name="name" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-xl bg-black/50 border border-white/10 text-white text-xs focus:outline-none focus:border-white transition-all" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Correo Electrónico</label>
+                <input type="email" name="email" required placeholder="tu@correo.com" class="w-full px-4 py-2.5 rounded-xl bg-black/50 border border-white/10 text-white text-xs focus:outline-none focus:border-white transition-all" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Mensaje</label>
+              <textarea name="message" rows="4" required placeholder="Describe brevemente tus objetivos o requerimientos analíticos..." class="w-full px-4 py-2.5 rounded-xl bg-black/50 border border-white/10 text-white text-xs focus:outline-none focus:border-white transition-all resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto pill-btn-white text-xs font-bold justify-center">
+              <span>Enviar Mensaje</span>
+              <span>➔</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Minimalist Footer -->
+  <footer class="border-t border-white/[0.08] py-8 text-xs text-slate-500 max-w-7xl mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div>
+      © 2026 Gabriel Quezada Avila · Ingeniero en Informática (UPIICSA · IPN)
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://gabriel-quezada-avila.link" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Gravatar</a>
+      <a href="https://github.com/quezarbelia/Portafolio" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Repository</a>
+    </div>
+  </footer>
+
+
+  <!-- MODAL: DETALLES DE PROYECTO ANALÍTICO (TABLEAU, EXCEL, PYTHON) -->
+  <div id="analytics-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="window.closeAnalyticsModal()"></div>
+    <div class="modal-content relative z-10 w-full max-w-3xl rounded-3xl p-6 sm:p-8 bg-[#11131a] border border-white/15 shadow-2xl transform transition-all duration-300 scale-95 opacity-0 max-h-[90vh] overflow-y-auto">
+      <button onclick="window.closeAnalyticsModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+      
+      <span id="analytics-modal-badge" class="text-xs font-mono uppercase tracking-wider text-amber-400 block mb-1">Tipo de Proyecto</span>
+      <h3 id="analytics-modal-title" class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">Título</h3>
+      
+      <!-- Embedded viz container if Tableau -->
+      <div id="analytics-modal-embed" class="mb-6 hidden"></div>
+
+      <p id="analytics-modal-summary" class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6"></p>
+
+      <!-- Metrics -->
+      <div id="analytics-modal-metrics" class="grid grid-cols-3 gap-3 mb-6"></div>
+
+      <!-- Business Objective -->
+      <div class="mb-5 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <h4 class="text-xs font-mono text-blue-400 uppercase tracking-wider mb-1">🎯 Objetivo de Negocio</h4>
+        <p id="analytics-modal-objective" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+      <!-- Dataset & Modeling -->
+      <div class="mb-6 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">📂 Datos & Modelado</h4>
+        <p id="analytics-modal-dataset" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+      <!-- Tags -->
+      <div class="mb-6">
+        <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Herramientas & Competencias</h4>
+        <div id="analytics-modal-tags" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <a id="analytics-modal-download-btn" href="#" download class="pill-btn text-xs flex items-center gap-1.5 hidden" title="Descargar libro Excel .xlsx">
+            <span>📥 Descargar .xlsx</span>
+          </a>
+          <a id="analytics-modal-action-btn" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs flex items-center gap-1.5">
+            <span>Abrir Proyecto</span>
+            <span>↗</span>
+          </a>
+        </div>
+        <button onclick="window.closeAnalyticsModal()" class="text-xs text-slate-400 hover:text-white">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODAL: DETALLES DE CASO DE ESTUDIO (LEGACY/SYSTEMS) -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="window.closeProjectModal()"></div>
+    <div class="modal-content relative z-10 w-full max-w-2xl rounded-3xl p-6 sm:p-8 bg-[#11131a] border border-white/15 shadow-2xl transform transition-all duration-300 scale-95 opacity-0 max-h-[90vh] overflow-y-auto">
+      <button onclick="window.closeProjectModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+      
+      <span id="modal-category" class="text-xs font-mono uppercase tracking-wider text-blue-400 block mb-1">Categoría</span>
+      <h3 id="modal-title" class="text-2xl font-bold text-white tracking-tight mb-3">Título</h3>
+      <p id="modal-overview" class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6"></p>
+
+      <div id="modal-metrics" class="grid grid-cols-3 gap-3 mb-6"></div>
+
+      <div class="mb-6">
+        <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Detalles Técnicos & Arquitectura</h4>
+        <p id="modal-details" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Stack de Tecnologías</h4>
+        <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <a id="modal-repo-btn" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn text-xs">GitHub</a>
+          <a id="modal-demo-btn" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs">Tableau / Demo</a>
+        </div>
+        <button onclick="window.closeProjectModal()" class="text-xs text-slate-400 hover:text-white">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODAL: CV RESUMEN PROFESIONAL (Basado en LaTeX Oficial) -->
+  <div id="cv-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" onclick="window.closeCvModal()"></div>
+    <div class="modal-content relative z-10 w-full max-w-3xl rounded-3xl p-6 sm:p-8 bg-[#11131a] border border-white/15 shadow-2xl transform transition-all duration-300 scale-95 opacity-0 max-h-[92vh] overflow-y-auto">
+      <button onclick="window.closeCvModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+      
+      <!-- CV Top Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5 pb-6 border-b border-white/10 mb-6">
+        <img 
+          src="/gabriel-avatar.jpg" 
+          alt="Gabriel Quezada Avila"
+          class="w-20 h-20 rounded-2xl border border-white/20 object-cover object-top shadow-lg shrink-0"
+        />
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-white tracking-tight">GABRIEL QUEZADA AVILA</h3>
+          <p class="text-sm text-blue-400 font-semibold mt-0.5">Ingeniero en Informática</p>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 font-mono mt-2">
+            <span>📍 Ciudad de México</span>
+            <span>•</span>
+            <a href="tel:5587195907" class="hover:text-white transition-colors text-emerald-400">📞 55 8719-5907</a>
+            <span>•</span>
+            <a href="mailto:gabrielqva.10@gmail.com" class="hover:text-white transition-colors">✉️ gabrielqva.10@gmail.com</a>
+            <span>•</span>
+            <a href="https://github.com/quezarbelia" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">🐙 github.com/quezarbelia</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CV Sections -->
+      <div class="space-y-6 text-xs text-slate-300">
+        
+        <!-- Perfil Profesional -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-2 font-bold pb-1 border-b border-blue-500/30">
+            Perfil Profesional
+          </h4>
+          <p class="leading-relaxed text-slate-300 text-xs sm:text-[13px]">
+            Ingeniero en Informática enfocado en Análisis de Datos, Business Intelligence y Ciencia de Datos. Experiencia en el sector público gestionando flujos de datos operativos y fiscales, diseño de bases de datos relacionales, automatización de procesos mediante scripts y desarrollo de tableros ejecutivos. Orientado a transformar requerimientos funcionales en soluciones analíticas estructuradas, gobernanza del dato, comunicación técnica clara y adopción de tecnologías en la nube.
+          </p>
+        </div>
+
+        <!-- Experiencia Profesional -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-3 font-bold pb-1 border-b border-blue-500/30">
+            Experiencia Profesional
+          </h4>
+          
+          <!-- Rol 1: CONTRIBUTEL SAFCDMX -->
+          <div class="mb-4">
+            <div class="flex flex-wrap items-center justify-between gap-1">
+              <span class="font-bold text-white text-sm">Analista de Datos y Operaciones</span>
+              <span class="font-mono text-blue-400 text-[11px]">Agosto 2025 – Actualidad</span>
+            </div>
+            <p class="text-slate-400 italic mb-2">CONTRIBUTEL — Secretaría de Administración y Finanzas de la CDMX (SAFCDMX)</p>
+            <ul class="space-y-1 text-slate-300 list-disc list-inside">
+              <li>Estructuración, limpieza y depuración de flujos de datos operativos y fiscales para el control de la gestión institucional.</li>
+              <li>Automatización y mantenimiento de reportes periódicos mediante consultas complejas en SQL y macros con VBA en MS Access.</li>
+              <li>Generación de informes analíticos y tableros con métricas de rendimiento orientados a la toma de decisiones directivas.</li>
+              <li>Asesoría especializada y resolución de incidencias normativas a contribuyentes, traduciendo procesos técnicos a lenguaje claro.</li>
+            </ul>
+          </div>
+
+          <!-- Rol 2: Consultor Independiente -->
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-1">
+              <span class="font-bold text-white text-sm">Consultor de Sistemas y Datos (Proyectos Independientes)</span>
+              <span class="font-mono text-blue-400 text-[11px]">Enero 2025 – Actualidad</span>
+            </div>
+            <p class="text-slate-400 italic mb-2">Desarrollo Autónomo y Arquitectura de Información</p>
+            <ul class="space-y-1 text-slate-300 list-disc list-inside">
+              <li>Modelado e implementación de bases de datos relacionales (PostgreSQL, MySQL) con consultas optimizadas y triggers.</li>
+              <li>Desarrollo de scripts en Python para la extracción, transformación y carga (ETL) de fuentes de datos heterogéneas.</li>
+              <li>Diseño de flujos funcionales y prototipos interactivos en Figma integrados con bases de datos y servicios backend.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Educación -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-2 font-bold pb-1 border-b border-blue-500/30">
+            Educación
+          </h4>
+          <div class="space-y-2">
+            <div class="flex flex-wrap items-center justify-between">
+              <div>
+                <span class="font-bold text-white">Ingeniería en Informática (En formación)</span>
+                <span class="text-slate-400 block">UPIICSA — Instituto Politécnico Nacional (IPN)</span>
+              </div>
+              <span class="font-mono text-slate-400">2025 – En curso · CDMX</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-between">
+              <div>
+                <span class="font-bold text-white">Técnico en Informática</span>
+                <span class="text-slate-400 block">CECyT 5 "Benito Juárez" — Instituto Politécnico Nacional (IPN)</span>
+              </div>
+              <span class="font-mono text-slate-400">2021 – 2024 · CDMX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Habilidades Técnicas -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-2 font-bold pb-1 border-b border-blue-500/30">
+            Habilidades Técnicas
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+            <div class="p-2 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Análisis de Datos y BI:</span>
+              <span class="text-slate-400">Power BI (DAX, Power Query), Tableau Server / Desktop, Microsoft Fabric, Excel Avanzado (Tablas dinámicas, modelado y Solver).</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Bases de Datos y DBA:</span>
+              <span class="text-slate-400">Oracle Database (administración básica/DBA, SQL, PL/SQL), SQL Server, PostgreSQL, MySQL, SQLite, MS Access.</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Lenguajes de Programación:</span>
+              <span class="text-slate-400">Python, SQL, Java, C++, VBA.</span>
+            </div>
+            <div class="p-2 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Cloud y Entornos:</span>
+              <span class="text-slate-400">Google Cloud (BigQuery), AWS (S3, RDS, EC2), Supabase, Linux (Ubuntu, Debian), Git, GitHub, Figma, DER.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificaciones y Formación Continua -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-2 font-bold pb-1 border-b border-blue-500/30">
+            Certificaciones y Formación Continua
+          </h4>
+          <ul class="space-y-1.5 list-disc list-inside text-slate-300">
+            <li><strong class="text-white">Certificación Excel Green Belt (A2 Capacitación):</strong> Especialización en modelado analítico, funciones complejas y automatización.</li>
+            <li><strong class="text-white">Google Cloud Professional Database Engineer:</strong> En preparación activa (arquitectura, disponibilidad y gestión en nube).</li>
+            <li><strong class="text-white">Especialización en Ciencia de Datos:</strong> Formación continua en análisis exploratorio (EDA), manipulación de datos y estadística con Python.</li>
+          </ul>
+        </div>
+
+        <!-- Competencias Profesionales -->
+        <div>
+          <h4 class="font-mono text-white text-xs uppercase tracking-wider mb-2 font-bold pb-1 border-b border-blue-500/30">
+            Competencias Profesionales
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px]">
+            <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Enfoque Analítico</span>
+              <span class="text-slate-400">Traducción de requerimientos operativos en soluciones de datos estructuradas y tableros accionables.</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Comunicación Técnica</span>
+              <span class="text-slate-400">Habilidad para presentar análisis y hallazgos tanto a equipos de desarrollo como a personal directivo.</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <span class="font-bold text-white block">Calidad y Gobernanza</span>
+              <span class="text-slate-400">Validación sistemática de registros, estandarización de consultas y resguardo de la integridad del dato.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CV Bottom Actions -->
+      <div class="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="pill-btn text-xs flex items-center gap-1.5">
+            <span>🖨️ Imprimir / Guardar en PDF</span>
+          </button>
+          <a href="https://wa.me/525587195907" target="_blank" rel="noopener noreferrer" class="pill-btn text-xs text-emerald-400 flex items-center gap-1.5">
+            <span>💬 WhatsApp: 55 8719-5907</span>
+          </a>
+        </div>
+        <button onclick="window.copyEmail(); window.closeCvModal();" class="pill-btn-white text-xs">
+          <span>Copiar Email y Contactar</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
