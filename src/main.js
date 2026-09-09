@@ -456,8 +456,33 @@ function initContactForm() {
   });
 }
 
+// Mobile Navigation Toggle
+function initMobileNav() {
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const menu = document.getElementById('mobile-nav-menu');
+  if (!toggleBtn || !menu) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
   initSpotlight();
   initWorkTable();
   initContactForm();
