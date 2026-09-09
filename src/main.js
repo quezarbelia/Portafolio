@@ -121,75 +121,115 @@ export function renderAnalyticsGrid(filterType = 'all') {
     ? analyticsProjects 
     : analyticsProjects.filter(p => p.type === filterType);
 
-  container.innerHTML = filtered.map(p => `
-    <article class="spotlight-card rounded-3xl p-6 border border-white/10 bg-[#12141c]/80 flex flex-col justify-between group transition-all duration-300 hover:border-white/25">
-      <div>
-        <div class="flex items-center justify-between gap-2 mb-4">
-          <span class="px-3 py-1 rounded-full text-xs font-mono font-medium border ${p.typeColor}">
-            ${p.typeBadge}
-          </span>
-          ${p.isLive 
-            ? '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>En Vivo</span>' 
-            : '<span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/5 text-slate-400 border border-white/10">Próximamente</span>'
-          }
-        </div>
+  container.innerHTML = filtered.map(p => {
+    // Upcoming / Próximamente: blurred card with only title and no extra info
+    if (!p.isLive) {
+      return `
+        <article class="spotlight-card rounded-3xl p-6 sm:p-7 border border-dashed border-white/15 bg-white/[0.02] backdrop-blur-md relative overflow-hidden flex flex-col justify-between min-h-[220px] transition-all duration-300 opacity-70 hover:opacity-95 group">
+          <!-- Glassmorphism Blur Background Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0b0c10]/40 to-[#0b0c10]/80 backdrop-blur-[6px] pointer-events-none"></div>
 
-        <div class="flex items-start gap-3 mb-3">
-          <span class="text-2xl mt-0.5">${p.icon}</span>
-          <h3 class="text-xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors leading-snug">
-            ${p.title}
-          </h3>
-        </div>
-
-        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-5">
-          ${p.summary}
-        </p>
-
-        <!-- Metric Badges -->
-        <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-black/40 border border-white/5 mb-5">
-          ${p.metrics.map(m => `
-            <div class="text-center">
-              <span class="block text-xs font-bold text-white font-mono">${m.value}</span>
-              <span class="text-[9px] text-slate-400 font-medium block truncate">${m.label}</span>
+          <div class="relative z-10">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium border ${p.typeColor} opacity-75">
+                ${p.typeBadge}
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/5 text-slate-400 border border-white/10 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400/80 animate-pulse"></span>
+                Próximamente
+              </span>
             </div>
-          `).join('')}
+
+            <div class="flex items-start gap-3 my-4">
+              <span class="text-2xl mt-0.5 opacity-60">${p.icon}</span>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-200 tracking-tight leading-snug">
+                ${p.title}
+              </h3>
+            </div>
+          </div>
+
+          <div class="relative z-10 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+            <span class="flex items-center gap-1.5 text-slate-400">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              En desarrollo
+            </span>
+            <span class="text-[10px] tracking-wider text-slate-600">RESERVADO</span>
+          </div>
+        </article>
+      `;
+    }
+
+    // Live projects with full details, metrics and links
+    return `
+      <article class="spotlight-card rounded-3xl p-6 border border-white/10 bg-[#12141c]/80 flex flex-col justify-between group transition-all duration-300 hover:border-white/25">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono font-medium border ${p.typeColor}">
+              ${p.typeBadge}
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              En Vivo
+            </span>
+          </div>
+
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-2xl mt-0.5">${p.icon}</span>
+            <h3 class="text-xl font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors leading-snug">
+              ${p.title}
+            </h3>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-5">
+            ${p.summary}
+          </p>
+
+          <!-- Metric Badges -->
+          <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-black/40 border border-white/5 mb-5">
+            ${p.metrics.map(m => `
+              <div class="text-center">
+                <span class="block text-xs font-bold text-white font-mono">${m.value}</span>
+                <span class="text-[9px] text-slate-400 font-medium block truncate">${m.label}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            ${p.tags.map(t => `
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded-lg bg-white/5 text-slate-300 border border-white/10">${t}</span>
+            `).join('')}
+          </div>
         </div>
 
-        <!-- Tags -->
-        <div class="flex flex-wrap gap-1.5 mb-6">
-          ${p.tags.map(t => `
-            <span class="px-2 py-0.5 text-[11px] font-mono rounded-lg bg-white/5 text-slate-300 border border-white/10">${t}</span>
-          `).join('')}
-        </div>
-      </div>
+        <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+          <button onclick="window.openAnalyticsModal('${p.id}')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition-colors">
+            <span>Ver Detalles & Métricas</span>
+            <span>➔</span>
+          </button>
 
-      <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
-        <button onclick="window.openAnalyticsModal('${p.id}')" class="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 transition-colors">
-          <span>Ver Detalles & Métricas</span>
-          <span>➔</span>
-        </button>
-
-        <div class="flex items-center gap-2">
-          ${p.downloadPath 
-            ? `<a href="${p.downloadPath}" download class="pill-btn text-xs py-1.5 px-3 flex items-center gap-1.5" title="Descargar archivo .xlsx">
-                <span>.xlsx</span>
-                <span>📥</span>
-              </a>`
-            : ''
-          }
-          ${p.link.startsWith('http') 
-            ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs py-1.5 px-3 flex items-center gap-1.5" title="Abrir recurso">
-                <span>${p.type === 'tableau' ? 'Tableau' : p.type === 'excel' ? 'Google Sheets' : 'Abrir'}</span>
-                <span>↗</span>
-              </a>`
-            : `<button onclick="window.openAnalyticsModal('${p.id}')" class="pill-btn text-xs py-1.5 px-3">
-                <span>Detalles</span>
-              </button>`
-          }
+          <div class="flex items-center gap-2">
+            ${p.downloadPath 
+              ? `<a href="${p.downloadPath}" download class="pill-btn text-xs py-1.5 px-3 flex items-center gap-1.5" title="Descargar archivo .xlsx">
+                  <span>.xlsx</span>
+                  <span>📥</span>
+                </a>`
+              : ''
+            }
+            ${p.link.startsWith('http') 
+              ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs py-1.5 px-3 flex items-center gap-1.5" title="Abrir recurso">
+                  <span>${p.type === 'tableau' ? 'Tableau' : p.type === 'excel' ? 'Google Sheets' : 'Abrir'}</span>
+                  <span>↗</span>
+                </a>`
+              : `<button onclick="window.openAnalyticsModal('${p.id}')" class="pill-btn text-xs py-1.5 px-3">
+                  <span>Detalles</span>
+                </button>`
+            }
+          </div>
         </div>
-      </div>
-    </article>
-  `).join('');
+      </article>
+    `;
+  }).join('');
 
   initSpotlight();
 }
