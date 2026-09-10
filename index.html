@@ -111,7 +111,6 @@
     <a href="#work" class="mobile-nav-link block text-sm font-medium text-slate-300 hover:text-white py-1">Work</a>
     <a href="#contacto" class="mobile-nav-link block text-sm font-medium text-slate-300 hover:text-white py-1">Contacto</a>
     <div class="pt-3 border-t border-white/10 flex items-center gap-2">
-      <a href="https://wa.me/525587195907" target="_blank" rel="noopener noreferrer" class="pill-btn text-xs text-emerald-400 flex-1 justify-center">WhatsApp</a>
       <button onclick="window.copyEmail()" class="pill-btn-white text-xs flex-1 justify-center">Copiar Email</button>
     </div>
   </div>
@@ -555,10 +554,6 @@
               <span>Gravatar: gabriel-quezada-avila.link</span>
               <span>➔</span>
             </a>
-            <a href="https://wa.me/525587195907" target="_blank" rel="noopener noreferrer" class="pill-btn w-full justify-between text-emerald-400">
-              <span>WhatsApp / Tel: 55 8719-5907</span>
-              <span>➔</span>
-            </a>
             <button onclick="window.copyEmail()" class="pill-btn w-full justify-between text-slate-200">
               <span>Email: gabrielqva.10@gmail.com</span>
               <span>Copiar</span>
@@ -650,9 +645,7 @@
       <!-- Action Footer -->
       <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2">
-          <a id="analytics-modal-download-btn" href="#" download class="pill-btn text-xs flex items-center gap-1.5 hidden" title="Descargar libro Excel .xlsx">
-            <span>📥 Descargar .xlsx</span>
-          </a>
+          <div id="analytics-modal-download-container"></div>
           <a id="analytics-modal-action-btn" href="#" target="_blank" rel="noopener noreferrer" class="pill-btn-white text-xs flex items-center gap-1.5">
             <span>Abrir Proyecto</span>
             <span>↗</span>
@@ -715,8 +708,6 @@
           <p class="text-sm text-blue-400 font-semibold mt-0.5">Ingeniero en Informática</p>
           <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 font-mono mt-2">
             <span>📍 Ciudad de México</span>
-            <span>•</span>
-            <a href="tel:5587195907" class="hover:text-white transition-colors text-emerald-400">📞 55 8719-5907</a>
             <span>•</span>
             <a href="mailto:gabrielqva.10@gmail.com" class="hover:text-white transition-colors">✉️ gabrielqva.10@gmail.com</a>
             <span>•</span>
@@ -863,9 +854,6 @@
           <button onclick="window.print()" class="pill-btn text-xs flex items-center gap-1.5">
             <span>🖨️ Imprimir / Guardar en PDF</span>
           </button>
-          <a href="https://wa.me/525587195907" target="_blank" rel="noopener noreferrer" class="pill-btn text-xs text-emerald-400 flex items-center gap-1.5">
-            <span>💬 WhatsApp: 55 8719-5907</span>
-          </a>
         </div>
         <button onclick="window.copyEmail(); window.closeCvModal();" class="pill-btn-white text-xs">
           <span>Copiar Email y Contactar</span>

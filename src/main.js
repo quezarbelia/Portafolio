@@ -280,14 +280,17 @@ export function openAnalyticsModal(projectId) {
   `).join('');
 
   const liveActionBtn = document.getElementById('analytics-modal-action-btn');
-  const downloadActionBtn = document.getElementById('analytics-modal-download-btn');
+  const downloadContainer = document.getElementById('analytics-modal-download-container');
 
-  if (downloadActionBtn) {
+  if (downloadContainer) {
     if (project.downloadPath) {
-      downloadActionBtn.href = project.downloadPath;
-      downloadActionBtn.classList.remove('hidden');
+      downloadContainer.innerHTML = `
+        <a href="${project.downloadPath}" download class="pill-btn text-xs flex items-center gap-1.5" title="Descargar archivo">
+          <span>📥 Descargar libro Excel</span>
+        </a>
+      `;
     } else {
-      downloadActionBtn.classList.add('hidden');
+      downloadContainer.innerHTML = '';
     }
   }
 
@@ -337,9 +340,13 @@ export function closeAnalyticsModal() {
   modal.querySelector('.modal-content').classList.add('scale-95', 'opacity-0');
   setTimeout(() => {
     modal.classList.add('hidden');
-    document.body.style.overflow = '';
+    const downloadContainer = document.getElementById('analytics-modal-download-container');
+    if (downloadContainer) {
+      downloadContainer.innerHTML = '';
+    }
     const embedContainer = document.getElementById('analytics-modal-embed');
     if (embedContainer) embedContainer.innerHTML = '';
+    document.body.style.overflow = '';
   }, 250);
 }
 

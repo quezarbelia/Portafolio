@@ -49,7 +49,7 @@ especialidad : Data Analytics · Business Intelligence · Cloud Data Management
 certificación: Excel Green Belt (A2 Capacitación) · GCP DB Engineer (En preparación)
 mentalidad   : "Transformar flujos de datos operativos en decisiones estratégicas accionables"
 ubicación    : Ciudad de México, MX (UTC-6)
-contacto     : Tel/WhatsApp: 55 8719-5907 · gabrielqva.10@gmail.com
+contacto     : gabrielqva.10@gmail.com
 gravatar_link: https://gabriel-quezada-avila.link
 ```
 
